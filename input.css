@@ -10,16 +10,16 @@ body {
 
 @layer base {
   h3 {
-  @apply text-darkGrayishBlue font-bold text-4xl md:text-5xl mb-8;
+    @apply mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl;
   }
 }
 
 .button-container {
-@apply flex flex-col md:flex-row justify-center space-y-4 md:-space-y-0 md:space-x-4 w-full;
+  @apply flex flex-col md:flex-row justify-center space-y-4 md:-space-y-0 md:space-x-4 w-full;
 }
 
 .section-container {
-  @apply max-w-6xl mx-auto text-center;
+  @apply max-w-6xl mx-auto text-center px-10;
 }
 
 @media (max-width: 576px) {
