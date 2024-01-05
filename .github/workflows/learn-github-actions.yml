@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Run Hello World
-        run: echo "Hello World"
-        shell: bash
+      - name: Make GET request
+        run: |
+          TARGET_URL="https://burc-yorumlari.vercel.app/get/aslan"
+          RESPONSE=$(curl -sS "$TARGET_URL")
+          echo "Response from $TARGET_URL: $RESPONSE"
