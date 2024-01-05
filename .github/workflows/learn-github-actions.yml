@@ -16,5 +16,5 @@ jobs:
       - name: Make GET request
         run: |
           TARGET_URL="https://burc-yorumlari.vercel.app/get/aslan"
-          RESPONSE=$(curl -sS "$TARGET_URL")
-          echo "Response from $TARGET_URL: $RESPONSE"
+          RESPONSE=$(curl -sS "$TARGET_URL" | jq -r '.[0].Burc')
+          echo "Burc: $RESPONSE"
